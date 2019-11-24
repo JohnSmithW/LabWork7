@@ -48,7 +48,7 @@ window.onload = function() {
   }
 
   addToListButton.onclick = function addToListingElements() {
-    var newListElement = prompt('input an element you want to add', '')
+    var newListElement = prompt('input an element you want to add', '');
     if (newListElement !== '') {
       listingElements.push(newListElement);
       updateUI();
@@ -75,5 +75,5 @@ window.onload = function() {
   sortButton.onclick = function() {
     storeElements.sort();
     updateUI();
-  }
+  };
 };
