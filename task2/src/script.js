@@ -1,3 +1,5 @@
+import './styles.css';
+
 'use strict';
 
 window.onload = function() {
@@ -5,12 +7,7 @@ window.onload = function() {
   var listingElements = ['apple', 'orange'];
   var storeElements = [];
 
-
-  var addToListButton = document.querySelector('#add-to-list-button');
   var addButton = document.querySelector('#add-button');
-  var deleteButton = document.querySelector('#delete-button');
-  var sortButton = document.querySelector('#sort-button');
-
 
   function addToStoreElements(element) {
     var elementPosition = listingElements.indexOf(element);
@@ -53,7 +50,7 @@ window.onload = function() {
     }
   }
 
-
+  var addToListButton = document.querySelector('#add-to-list-button');
 
   function addToListingElements() {
     var newListElement = prompt('input an element you want to add', '');
@@ -61,6 +58,8 @@ window.onload = function() {
       listingElements.push(newListElement);
     }
   }
+
+  var sortButton = document.querySelector('#sort-button');
 
   function sortElements() {
     storeElements.sort();
@@ -81,6 +80,8 @@ window.onload = function() {
   };
 
 
+
+  var deleteButton = document.querySelector('#delete-button');
 
   deleteButton.onclick = function() {
     var selectedOption = document.querySelector('.app option:checked');
