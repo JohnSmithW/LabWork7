@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <title>task1</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="app">
+      <div class="listing-block">
+        <p>Listing:</p>
+        <select size="10" class="listing-select">
+          <% listingItems.forEach(function(item) { %>
+            <option><%-item%></option>
+          <% }); %>
+        </select>
+      </div>
+
+      <div class="store-block">
+        <p>Store:</p>
+        <select size="10" class="store-select">
+          <% storeItems.forEach(function(item) { %>
+            <option><%-item%></option>
+          <% }); %>
+        </select>
+      </div>
+    </div>
+
+
+    <button type="button" id="add-button">
+        Add to store
+      </button>
+
+
+    <button type="button" id="delete-button">
+        Delete element
+      </button>
+
+
+    <button type="button" id="add-to-list-button">
+        Add to list
+      </button>
+
+
+    <button type="button" id="sort-button">
+       Sort elements
+      </button>
+
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.3.0/lodash.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
