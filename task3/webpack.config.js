@@ -32,7 +32,11 @@ module.exports = {
         'css-loader',
         'postcss-loader'
       ],
-    }, ],
+
+    }, {
+      test: /.html$/,
+      loader: 'html-loader'
+    }],
   },
 
 };

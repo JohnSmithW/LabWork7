@@ -1,10 +1,7 @@
-'use strict';
-
-
 import './styles.css';
+import './lodash.js';
 
-import './lodash.min.js';
-
+'use strict';
 
 window.onload = function() {
 
@@ -60,13 +57,10 @@ window.onload = function() {
   }
 
   updateUI();
-
-
-
   var addToListButton = document.querySelector('#add-to-list-button');
 
   function addToListingElements() {
-    var newListElement = window.prompt('input an element you want to add', '');
+    var newListElement = prompt('input an element you want to add', '');
     if (newListElement !== '') {
       listingElements.push(newListElement);
     }
