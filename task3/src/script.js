@@ -1,7 +1,9 @@
-import './styles.css';
-import './lodash.js';
-
 'use strict';
+import './styles.css';
+
+
+
+var _ = require('lodash');
 
 window.onload = function() {
 
@@ -36,19 +38,19 @@ window.onload = function() {
     var storeSelect = document.querySelector('.store-select');
     var listingSelect = document.querySelector('.listing-select');
 
-    var storeSelectHTML = _.template(' <select size="10" class="store-select">\
-    <% storeItems.forEach(function(item) { %>\
-      <option><%-item%></option>\
-    <% }); %>\
-  </select>')({
+    var storeSelectHTML = _.template('<select size="10" class="store-select">' +
+      '<% storeItems.forEach(function(item) { %>' +
+      '<option><%-item%></option>' +
+      '<% }); %>' +
+      '</select>')({
       storeItems: storeElements
     });
 
-    var listingSelectHTML = _.template(' <select size="10" class="listing-select">\
-    <% listingItems.forEach(function(item) { %>\
-      <option><%-item%></option>\
-    <% }); %>\
-  </select>')({
+    var listingSelectHTML = _.template(' <select size="10" class="listing-select">' +
+      '<% listingItems.forEach(function(item) { %>' +
+      '<option><%-item%></option>' +
+      '<% }); %>' +
+      '</select>')({
       listingItems: listingElements
     });
 
@@ -60,7 +62,7 @@ window.onload = function() {
   var addToListButton = document.querySelector('#add-to-list-button');
 
   function addToListingElements() {
-    var newListElement = prompt('input an element you want to add', '');
+    var newListElement = window.prompt('input an element you want to add', '');
     if (newListElement !== '') {
       listingElements.push(newListElement);
     }

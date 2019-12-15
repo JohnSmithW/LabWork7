@@ -16,14 +16,15 @@
     "jshint": "src/"
   },
   "scripts": {
-    "server": "live-server src",
+    "server": "live-server build",
     "validate-html": "html-validate src",
     "validate-css": "css-validator src/styles.css",
     "jshint": "jshint src/",
     "watch": "npm-watch",
     "dev-mode": "npm-run-all --parallel server watch",
     "postinstall": "npm i -g live-server css-validator html-validate jshint",
-    "build": "webpack"
+    "build": "webpack",
+    "build-and-validate": "npm-run-all --parallel validate-css  jshint build"
   },
   "author": "Kalagin Ivan",
   "license": "ISC",
@@ -35,6 +36,7 @@
     "html-loader": "^0.5.5",
     "html-replace-webpack-plugin": "^2.5.6",
     "html-webpack-plugin": "^3.2.0",
+    "lodash": "^4.17.15",
     "mini-css-extract-plugin": "^0.8.0",
     "npm-run-all": "^4.1.5",
     "npm-watch": "^0.6.0",
